@@ -13,9 +13,9 @@
          
         <div >
         
-            <x-tag>Tags</x-tag>
-            <x-tag>Tags</x-tag>
-            <x-tag>Tags</x-tag>
+            <x-tag size="base">Tags</x-tag>
+            <x-tag size="base">Tags</x-tag>
+            <x-tag size="base">Tags</x-tag>
         
         
         
