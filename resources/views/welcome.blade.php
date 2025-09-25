@@ -1,7 +1,8 @@
 <x-layout>
-<section>
+<div class="space-y-10">
+    <section>
     
-<h3 class="mb-6">Top Jobs</h3>
+<x-section-heading>Featured Jobs</x-section-heading>
 
      
 <div class="grid lg:grid-cols-3 gap-6">
@@ -14,4 +15,31 @@
 
     
 </section>
+<section>
+    <x-section-heading>tags</x-section-heading>
+
+    <div class="mt-6 space-x-1">
+        
+    <x-tag>Tag</x-tag>
+    <x-tag>Tag</x-tag>
+    <x-tag>Tag</x-tag>
+    <x-tag>Tag</x-tag>
+    <x-tag>Tag</x-tag>
+    <x-tag>Tag</x-tag>
+    <x-tag>Tag</x-tag>
+    <x-tag>Tag</x-tag>
+    <x-tag>Tag</x-tag>
+    <x-tag>Tag</x-tag>
+    <x-tag>Tag</x-tag>
+    <x-tag>Tag</x-tag>
+    <x-tag>Tag</x-tag>
+    <x-tag>Tag</x-tag>
+
+    </div>
+</section>
+<section>
+    <x-section-heading>Recent Jobs</x-section-heading>
+    
+</section>
+</div>
 </x-layout>

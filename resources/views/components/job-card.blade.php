@@ -8,10 +8,9 @@
         </div>
         <div class="flex justify-between items-center mt-auto">
         <div>
-
-            <a href="" class="bg-white/10 hover:bg-white/30 px-2 py-1 rounded-xl text-sm transition-colors duration-300">tag</a>
-            <a href="" class="bg-white/10 hover:bg-white/30 px-2 py-1 rounded-xl text-sm transition-colors duration-300">tag</a>
-            <a href="" class="bg-white/10 hover:bg-white/30 px-2 py-1 rounded-xl text-sm transition-colors duration-300">tag</a>
+            <x-tag>Tags</x-tag>
+            <x-tag>Tags</x-tag>
+            <x-tag>Tags</x-tag>
         
         
         </div>
