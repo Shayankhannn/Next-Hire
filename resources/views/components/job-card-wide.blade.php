@@ -1,4 +1,4 @@
-   <div class="p-4 bg-white/5 rounded-xl flex  gap-x-6">
+   <x-panel class="flex  gap-x-6">
     <div>
     <x-employer-logo/>        
      </div>
@@ -7,7 +7,7 @@
         <a href="" class="self-start text-sm text-gray-600">
             employer
         </a>
-        <h3 class="font-extrabold  text-lg mt-3   ">title</h3>
+        <h3 class="font-extrabold  text-lg mt-3 group-hover:text-blue-800   ">title</h3>
         <p class="text-gray-400 text-sm mt-auto ">desc</p>
     </div>   
          
@@ -21,4 +21,4 @@
         
     </div>
         
-        </div>
+        </x-panel>

@@ -1,10 +1,10 @@
-   <div class="p-4 bg-white/5 rounded-xl flex flex-col text-center">
-        <div class="self-start text-sm">
+   <x-panel class="flex flex-col "  >
+        <div class="self-start text-sm ">
             employer 
         </div>
-        <div class="py-8 font-bold">
-            <h3 class=" ">title</h3>
-            <p>desc</p>
+        <div class="py-8 ">
+            <h3 class="group-hover:text-blue-800 text-xl font-bold">title</h3>
+            <p class="text-sm mt-4">desc</p>
         </div>
         <div class="flex justify-between items-center mt-auto">
         <div>
@@ -17,4 +17,4 @@
 <x-employer-logo :width="42" />
     </div>
         
-        </div>
+        </x-panel>
