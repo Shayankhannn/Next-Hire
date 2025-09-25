@@ -1,5 +1,17 @@
 <x-layout>
 <div class="space-y-10">
+
+    {{-- search  --}}
+    <section>
+        <h1 class="font-bold text-4xl capitalize">Let's find your next job</h1>
+        
+        <form action="" method="get">
+            <input type="text" placeholder="Web Developer...." class="rounded-xl bg-white/5 border border-white/10 w-full px-5 py-4">
+        </form>
+  
+    </section>
+
+    {{-- job card  --}}
     <section>
     
 <x-section-heading>Featured Jobs</x-section-heading>
@@ -15,6 +27,7 @@
 
     
 </section>
+{{-- tags --}}
 <section>
     <x-section-heading>tags</x-section-heading>
 
@@ -37,10 +50,14 @@
 
     </div>
 </section>
+
+{{-- jobs wide  --}}
 <section>
     <x-section-heading>Recent Jobs</x-section-heading>
 
         <div class="mt-6 space-y-6">
+            <x-job-card-wide/> 
+            <x-job-card-wide/> 
             <x-job-card-wide/> 
 
         </div>
