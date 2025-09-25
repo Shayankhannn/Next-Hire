@@ -14,7 +14,7 @@
         
         
         </div>
-        <img src="https://placehold.co/40x40" alt="" class="rounded-xl">    
+<x-employer-logo :width="42" />
     </div>
         
         </div>
