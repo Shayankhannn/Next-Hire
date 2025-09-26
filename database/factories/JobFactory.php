@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Employer;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -17,8 +18,16 @@ class JobFactory extends Factory
     public function definition(): array
     {
         return [
+
+            'employer_id' => Employer::factory(),
             'title' => fake()->jobTitle,
-            'salary' => "$50,000",
+            'salary' => fake()->randomElement(["$50,000 USD","$60,000 USD","$80,000 USD","$100,000 USD","$150,000 USD"]),
+            'location' => 'Remote',
+            'schedule' => 'full Time',
+            'url' => fake()->url,
+            'featured' => false,
+
+        
         ];
     }
 }
