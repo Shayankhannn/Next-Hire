@@ -48,3 +48,7 @@ php artisan migrate:fresh --seed
 php artisan migrate:fresh --seed
 
 in job feature is for featured section
+
+php artisan make:controller SessionController --resource
+
+php artisan make:controller RegisteredUserController --resource
