@@ -8,6 +8,9 @@ TODO:
 fixed custom font size in app.css
 fixed tag spacing issue 
 fix image size issue 
+seeding issue in sequence
+
+----------
 
 backend 
 
