@@ -37,5 +37,7 @@ php artisan make:test
 php artisan make:migration create_job_tag_table
 
  
+php artisan migrate  
+php artisan db:seed
 
-
+php artisan migrate:fresh --seed

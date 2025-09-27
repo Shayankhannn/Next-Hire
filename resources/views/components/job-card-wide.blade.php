@@ -8,10 +8,10 @@
     
     <div class="flex-1 flex flex-col">  
         <a href="" class="self-start text-sm text-gray-600">
-            employer
+           {{ $job->employer->name }}
         </a>
-        <h3 class="font-extrabold  text-lg mt-3 group-hover:text-blue-800   ">title</h3>
-        <p class="text-gray-400 text-sm mt-auto ">desc</p>
+        <h3 class="font-extrabold  text-lg mt-3 group-hover:text-blue-800   ">{{ $job->title }}</h3>
+        <p class="text-gray-400 text-sm mt-auto ">{{ $job->salary }}</p>
     </div>   
          
         <div >
