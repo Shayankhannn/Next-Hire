@@ -18,7 +18,7 @@
 
      
 <div class="grid lg:grid-cols-3 gap-8 mt-6">
-@foreach ($jobs as $job )
+@foreach ($featuredjobs as $job )
             <x-job-card :$job/> 
                 
             @endforeach

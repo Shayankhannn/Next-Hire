@@ -6,9 +6,9 @@ Job Portal using laravel blade tailwind
 
 TODO:
 fixed custom font size in app.css
-fixed tag spacing issue 
+fixed tag spacing issue -- done
 fix image size issue 
-seeding issue in sequence
+seeding issue in sequence -- done
 
 ----------
 
@@ -46,3 +46,5 @@ php artisan db:seed
 php artisan migrate:fresh --seed
 
 php artisan migrate:fresh --seed
+
+in job feature is for featured section
