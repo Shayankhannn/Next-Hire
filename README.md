@@ -30,6 +30,12 @@ php artisan make:test
 
   we will be using unit
 
+  -------
 
+  php artisan make:model Tag -fm
+
+php artisan make:migration create_job_tag_table
+
+ 
 
 
