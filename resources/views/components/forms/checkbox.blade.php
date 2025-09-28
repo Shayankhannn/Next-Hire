@@ -14,4 +14,4 @@
         <input {{ $attributes($defaults) }}>
         <span class="pl-1">{{ $label }}</span>
     </div>
-</x-forms.field>
+</x-forms.field> 
