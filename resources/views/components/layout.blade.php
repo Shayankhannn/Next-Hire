@@ -21,9 +21,22 @@
                <a href="" >Salaries</a>
                <a href="" >Companies</a>
             </div>
-            <div >
-                <a href="">Post a Job </a>
+            @auth
+                <div >
+                <a href="/jobs/create">Post a Job </a>
             </div>
+                {{-- <div >
+                    <x-forms.form method="DELETE" action="/logout" class="inline">
+                        <button type="submit">LogOut</button>
+                    </x-forms.form>
+            </div> --}}
+            @endauth
+            @guest
+            <div class="space-x-4">
+                <a href="/register" class="bg-blue-600 px-4 py-2 rounded-md hover:bg-blue-700 transition">Register</a>
+                <a href="/login" class="bg-white text-black px-4 py-2 rounded-md hover:bg-gray-200 transition">Login</a>
+            </div>
+            @endguest
         </nav>
 
         <main class="mt-10 max-w-[986px] mx-auto ">
