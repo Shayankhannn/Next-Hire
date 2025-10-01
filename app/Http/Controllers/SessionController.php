@@ -8,20 +8,14 @@ use Illuminate\Validation\ValidationException;
 
 class SessionController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
-    public function index()
-    {
-        //
-    }
+  
 
     /**
      * Show the form for creating a new resource.
      */
     public function create()
     {
-        return view("auth.login");
+        return view('auth.login');
     }
 
     /**
