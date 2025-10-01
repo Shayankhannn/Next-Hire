@@ -25,11 +25,11 @@
                 <div >
                 <a href="/jobs/create">Post a Job </a>
             </div>
-                {{-- <div >
+                <div >
                     <x-forms.form method="DELETE" action="/logout" class="inline">
                         <button type="submit">LogOut</button>
                     </x-forms.form>
-            </div> --}}
+            </div>
             @endauth
             @guest
             <div class="space-x-4">

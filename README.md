@@ -9,6 +9,8 @@ fixed custom font size in app.css
 fixed tag spacing issue -- done
 fix image size issue 
 seeding issue in sequence -- done
+fixed white screen issue after login 
+fixed logout issue
 
 ----------
 
