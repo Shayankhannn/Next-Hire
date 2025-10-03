@@ -5,12 +5,18 @@ Job Portal using laravel blade tailwind
 
 
 TODO:
-fixed custom font size in app.css
-fixed tag spacing issue -- done
+fix custom font size in app.css
+fix tag spacing issue -- done
 fix image size issue 
 seeding issue in sequence -- done
-fixed white screen issue after login 
-fixed logout issue
+fix white screen issue after login 
+fix logout issue
+fix - error after creating job 
+fix -- create form select tag issue -- white
+
+
+learning
+look into storeJobrequest (storeJobrequest $request ) -- im job controller store func
 
 ----------
 

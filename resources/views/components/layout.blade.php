@@ -25,6 +25,11 @@
                 <div >
                 <a href="/jobs/create">Post a Job </a>
             </div>
+            <div>
+                <h4>
+                    Welcome, {{ auth()->user()->name }}
+                </h4>
+            </div>
                 <div >
                     <x-forms.form method="DELETE" action="/logout" class="inline">
                         <button type="submit">LogOut</button>
