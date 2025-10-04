@@ -27,7 +27,7 @@
             </div>
             <div>
                 <h4>
-                    Welcome, {{ auth()->user()->name }}
+                    Welcome, {{ auth()->user()->employer->name ?? auth()->user()->name }}
                 </h4>
             </div>
                 <div >

@@ -2,7 +2,7 @@ Next Hire
 
 Job Portal using laravel blade tailwind 
 
-
+------------------------
 
 TODO:
 fix custom font size in app.css
@@ -19,13 +19,13 @@ instead of form componenet --
 
 fix - error after creating job -- done was calling get in route insead of post -- 
 
+fix-- form submit error of job create -- done --- s was capital in name of salary input ----
+
+
 fix -- create form select tag issue -- 
 white
 
 fix -- job type field issue -- 
-
-learning
-look into storeJobrequest (storeJobrequest $request ) -- im job controller store func
 
 fix -- job card content 
 
@@ -37,6 +37,11 @@ fix --- tag spacing top bottom --
 
 ----------
 
+learning
+look into storeJobrequest (storeJobrequest $request ) -- im job controller store func
+
+
+-----------------
 
 backend 
 
