@@ -7,7 +7,7 @@
     
    
         
-    <x-forms.button>Create Account</x-forms.button>
+    <x-forms.button>Login</x-forms.button>
 </x-forms.form>
 </x-layout>
 

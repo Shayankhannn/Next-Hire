@@ -6,17 +6,34 @@ Job Portal using laravel blade tailwind
 
 TODO:
 fix custom font size in app.css
-fix tag spacing issue -- done
-fix image size issue 
-seeding issue in sequence -- done
-fix white screen issue after login 
-fix logout issue
-fix - error after creating job 
-fix -- create form select tag issue -- white
 
+fix tag spacing issue -- done
+
+fix image size issue 
+
+seeding issue in sequence -- done
+fix white screen issue after login --- done -- was calling redirect in if statement accidently
+
+fix logout issue --- done -- used form 
+instead of form componenet --
+
+fix - error after creating job -- done was calling get in route insead of post -- 
+
+fix -- create form select tag issue -- 
+white
+
+fix -- job type field issue -- 
 
 learning
 look into storeJobrequest (storeJobrequest $request ) -- im job controller store func
+
+fix -- job card content 
+
+fix -- remote issue 
+fix -- schedule and featured issue
+fix -- tags issue like same tags but capital and small are also considering diff
+
+fix --- tag spacing top bottom -- 
 
 ----------
 
@@ -61,3 +78,5 @@ in job feature is for featured section
 php artisan make:controller SessionController --resource
 
 php artisan make:controller RegisteredUserController --resource
+
+php artisan storage:link

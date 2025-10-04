@@ -10,8 +10,8 @@ class Job extends Model
 {
     /** @use HasFactory<\Database\Factories\JobFactory> */
     use HasFactory;
-
-
+    
+    
     public function tag(string $name): void
     { 
         $tag = Tag::firstOrCreate(['name'=>$name]);

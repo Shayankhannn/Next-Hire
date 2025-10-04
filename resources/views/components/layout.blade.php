@@ -31,9 +31,11 @@
                 </h4>
             </div>
                 <div >
-                    <x-forms.form method="DELETE" action="/logout" class="inline">
-                        <button type="submit">LogOut</button>
-                    </x-forms.form>
+                    <form method="POST" action="/logout" class="inline">
+                        @csrf
+                        @method('DELETE')
+                        <button>LogOut</button>
+                    </form>
             </div>
             @endauth
             @guest

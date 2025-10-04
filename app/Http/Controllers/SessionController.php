@@ -30,13 +30,13 @@ class SessionController extends Controller
 
         if(! Auth::attempt($sessionAttr)){
             throw ValidationException::withMessages([
-                'email' => 'The provided credentials do not match !.',
+                'password' => 'The provided credentials do not match !.',
             ]);
 
             request()->session()->regenerate();
-            return redirect('/');
             
         }
+        return redirect('/jobs');
 
     }
 
