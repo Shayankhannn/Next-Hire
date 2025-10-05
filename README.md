@@ -36,7 +36,9 @@ fix --- tag spacing top bottom -- done
 
 fix -- job featured query in job controller now its showing featured job only in featured but it should be shown in recent too 
 
-fix -- image and search results for in results.blade.php -- 
+fix -- image and search results for in results.blade.php -- done i was using form name but needed tag from url abort it --- done -- wasnt using array for multiple file type in validation 
+
+fix -- file validation and file field extention issue in registration --  
 
 ----------
 
