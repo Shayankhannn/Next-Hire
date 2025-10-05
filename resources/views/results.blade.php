@@ -1,5 +1,5 @@
 <x-layout>
-     <x-page-heading>Results</x-page-heading>
+     <x-page-heading>Search Results :</x-page-heading>
      
     <x-forms.divider/>
     <div class=" space-y-6">
