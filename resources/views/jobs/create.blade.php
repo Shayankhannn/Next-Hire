@@ -7,6 +7,7 @@
             <x-forms.input name="salary" type="text" label="Job Salary" placeholder="e.g. $50,000" />
             <x-forms.input name="location" type="text" label="Job Location" placeholder="e.g.Boston MA, etc." />
            <x-forms.select name="schedule" label="Job Type" >
+            <option >Select Job Type</option>
             <option >Part Time</option>
             <option >Full Time</option>
            </x-forms.select>
@@ -15,15 +16,9 @@
             <x-forms.checkbox name="featured"  label="Feature (Costs Extra)" />
             
             <x-forms.divider/>
-            <x-forms.input name="tags" type="text" label="Tags <small>Comma Separated***</small>" placeholder="e.g. frontend , video , education" />
+            <x-forms.input name="tags" type="text" label="Tags ( ,  Comma Separated)" placeholder="e.g. frontend , video , education" />
             <x-forms.button>Publish</x-forms.button>
             </x-forms.form>   
-            @if ($errors->any())
-    <ul class="text-red-500">
-        @foreach ($errors->all() as $error)
-            <li>{{ $error }}</li>
-        @endforeach
-    </ul>
-@endif
+          
  
         </x-layout>

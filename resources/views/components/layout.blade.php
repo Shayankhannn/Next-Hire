@@ -7,7 +7,7 @@
     <title>Next Hire</title>
     @vite(['resources/css/app.css','resources/js/app.js'])
 </head>
-<body class="bg-black text-white pb-10">
+<body class="bg-black text-white pb-10 capitalize">
     <div class="px-10">
         <nav class="flex justify-between items-center py-4 border-b border-white/10">
             <div >
@@ -15,27 +15,32 @@
          <img class="w-20 h-auto cover " src="{{ Vite::asset('resources/images/next-hire.png') }}" alt="" >
                 </a>
             </div>
-            <div class="space-x-6 font-bold">
+            <div class="space-x-4 font-bold ">
                <a href="" >Job</a>
                <a href="" >Careers</a>
                <a href="" >Salaries</a>
                <a href="" >Companies</a>
             </div>
             @auth
-                <div >
-                <a href="/jobs/create">Post a Job </a>
-            </div>
-            <div>
-                <h4>
-                    Welcome, {{ auth()->user()->employer->name ?? auth()->user()->name }}
-                </h4>
-            </div>
-                <div >
+                <div class="flex items-center space-x-3">
+                    <div>
+
+                        <a href="/jobs/create" class="bg-blue-600 px-4 py-2 rounded-md hover:bg-blue-700 transition font-bold">Post a Job </a>
+                    </div>
+            <div >
                     <form method="POST" action="/logout" class="inline">
                         @csrf
                         @method('DELETE')
-                        <button>LogOut</button>
+                        <button class="cursor-pointer bg-white text-black px-4 py-2 rounded-md hover:bg-gray-200 transition font-bold">LogOut</button>
                     </form>
+            </div>
+            <div>
+                
+                    {{-- Welcome, {{ auth()->user()->employer->name ?? auth()->user()->name }} --}}
+                <img src="{{ auth()->user()->employer->logo ?? auth()->user()->name }}" alt="" class="inline rounded-full w-10 h-10 object-cover ml-2">
+                
+            </div>
+                
             </div>
             @endauth
             @guest

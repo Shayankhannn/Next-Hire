@@ -54,9 +54,16 @@ class JobController extends Controller
         $job = Auth::user()->employer->jobs()->create(Arr::except($attr,'tags'));
 
         if($attr['tags'] ?? false){
-            // explode(',',$attr['tags']);
+            $tags =  explode(',',$attr['tags']);
+            // normalised tag and remove duplicates
+            $normalised = [];
 
-            foreach(explode(',',$attr['tags']) as $tag){
+            foreach($tags as $tag){
+                $clean = strtolower(trim($tag));
+                $clean = preg_replace('/[^a-z0-9]/', '', $clean);
+                $normalised[$clean] = $tag ;
+            }
+            foreach ($normalised as $tag ) {
                 $job->tag($tag);
             }
         }

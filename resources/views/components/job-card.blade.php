@@ -1,10 +1,10 @@
 @props(['job'])
 
-<x-panel class="flex flex-col "  >
-        <div class="self-start text-sm ">
+<x-panel class="flex flex-col capitalize"  >
+        <div class="self-start text-sm font-medium ">
             {{ $job->employer->name }} 
         </div>
-        <div class="py-8 ">
+        <div class="py-4 ">
             <h3 class="group-hover:text-blue-800 text-xl font-bold">
             <a href="{{ $job->url }}"  target="_blank">
 

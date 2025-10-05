@@ -13,6 +13,8 @@
     
         
     <x-forms.button>Create Account</x-forms.button>
+        <a href="/login" class="text-blue-600 hover:text-white group"> Have an account ?? <b class=" text-red-600 group-hover:text-white">Login</b></a>
+
 </x-forms.form>
 </x-layout>
 

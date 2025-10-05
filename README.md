@@ -9,31 +9,32 @@ fix custom font size in app.css
 
 fix tag spacing issue -- done
 
-fix image size issue 
+fix image size issue -- done
 
 seeding issue in sequence -- done
+
 fix white screen issue after login --- done -- was calling redirect in if statement accidently
 
-fix logout issue --- done -- used form 
-instead of form componenet --
+fix logout issue --- done -- used form instead of form componenet --
 
 fix - error after creating job -- done was calling get in route insead of post -- 
 
 fix-- form submit error of job create -- done --- s was capital in name of salary input ----
 
 
-fix -- create form select tag issue -- 
-white
+fix -- create form select tag issue -- white -- done not really
 
-fix -- job type field issue -- 
+fix -- job type field issue -- done 
 
-fix -- job card content 
+fix -- job card content -- doen partially will improve
 
-fix -- remote issue 
-fix -- schedule and featured issue
-fix -- tags issue like same tags but capital and small are also considering diff
+fix -- remote issue  -- done
+fix -- schedule and featured issue -- done
+fix -- tags issue like same tags but capital and small are also considering diff -- done
 
-fix --- tag spacing top bottom -- 
+fix --- tag spacing top bottom -- done
+
+fix -- job featured query in job controller now its showing featured job only in featured but it should be shown in recent too 
 
 ----------
 
