@@ -2,11 +2,12 @@
 
 
 <x-panel class="flex  gap-x-6">
+    
     <div>
     <x-employer-logo :employer="$job->employer"/>        
      </div>
     
-    <div class="flex-1 flex flex-col">  
+    <div class=" flex flex-col">  
         <a href="" class="self-start text-sm text-gray-600">
            {{ $job->employer->name }}
         </a>
@@ -16,9 +17,11 @@
             </a> 
         </h3>
         <p class="text-gray-400 text-sm mt-auto ">Location :{{ $job->location }} - Salary : {{$job->salary}}</p>
+        
+        <a href="/jobs/{{ $job->id }}" class="">View More </a>
     </div>   
-         
-        <div >
+    
+    <div class=" flex-1">
         
             @foreach ($job->tags as $tag )
                 <x-tag :$tag/>
@@ -29,3 +32,4 @@
     </div>
         
         </x-panel>
+   
