@@ -21,6 +21,9 @@ return new class extends Migration
             $table->string('location');
             $table->string('schedule')->default('full Time');
             $table->string('url');
+            $table->text('description')->nullable();
+            $table->text('responsibility')->nullable();
+
             $table->boolean('featured')->default(false);
 
             $table->timestamps();
