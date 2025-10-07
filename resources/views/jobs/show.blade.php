@@ -22,7 +22,7 @@
         <x-job-icon icon="map-pin">Location: {{ $job->location }} </x-job-icon>
         <x-job-icon icon="wallet">Salary: {{ $job->salary }} </x-job-icon>
         <x-job-icon icon="clock">Job Type: {{ $job->schedule }} </x-job-icon>
-        <x-job-icon icon="clock">Date Posted: {{ $job->created_at }} </x-job-icon>
+        <x-job-icon icon="clock">Date Posted: {{ $job->created_at->diffForHumans() }} </x-job-icon>
 
     </div>
 
@@ -32,9 +32,7 @@
          {{-- job responsibility  --}}
          {{-- job skills and requirement  --}}
          {{-- job benefits  --}}
-        <p>
-
-        </p>
+         
     </div>
     <div class="">
     {{--  company description --}}
