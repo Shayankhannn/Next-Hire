@@ -56,13 +56,15 @@
     <x-forms.divider/>
 
     {{-- about company  --}}
-    <div class="">
+    <div class="space-y-4">
     <h2 class="text-2xl font-medium text-blue-600 pt-6">About Company</h2>
     {{--  company description --}}
     <p class="text-gray-300 w-[80%]" >
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore, ipsum voluptas! Dolore animi inventore veritatis, nesciunt placeat iste fugiat sequi.
     </p>
-        <a href="{{ $job->url }}" class="text-sm text-blue-600 flex gap-1 items-center hover:text-white group">Apply Now <x-job-icon icon="arrow-right" class="w-2 h-2 group-hover:text-white"/></a>
+            <x-job-icon icon="building-2">Employees: {{ $job->created_at->diffForHumans() }} </x-job-icon>
+
+        <a href="{{ $job->url }}" class="text-md text-blue-600 flex gap-1 items-center hover:text-white group">Apply Now <x-job-icon icon="arrow-right" class="w-2 h-2 group-hover:text-white"/></a>
 
 </div>
 

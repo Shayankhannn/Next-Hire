@@ -96,3 +96,7 @@ php artisan storage:link
 
 using icons for job description 
 npm install lucide
+
+add this later if want  job close or open
+
+$table->boolean('is_active')->default(true);
