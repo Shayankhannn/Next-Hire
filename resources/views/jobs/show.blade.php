@@ -1,7 +1,7 @@
 <x-layout>
+    <div class="capitalize">
     <x-page-heading>Job Details</x-page-heading>
 <x-forms.divider/>
-
 <div class="flex justify-between items-center pb-6" >
     <div class="space-y-2">
 
@@ -46,7 +46,7 @@
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis voluptatem fuga adipisci corporis sunt blanditiis. Delectus eligendi tempore voluptatibus necessitatibus voluptatum natus laborum dicta odit ea, temporibus ullam deleniti voluptates!
             </p>
          {{-- job skills and requirement  --}}
-                           <h3 class="text-lg font-medium text-blue-600 pt-5">Job Responsibility</h3>
+                           <h3 class="text-lg font-medium text-blue-600 pt-5">Skills And Requirement</h3>
 
          {{-- job benefits  --}}
                            {{-- <h3 class="text-lg font-medium text-blue-600 pt-5"></h3> --}}
@@ -74,5 +74,5 @@
 </div>
 
 
-
+</div>
 </x-layout>
