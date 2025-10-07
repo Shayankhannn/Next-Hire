@@ -90,3 +90,9 @@ php artisan make:controller SessionController --resource
 php artisan make:controller RegisteredUserController --resource
 
 php artisan storage:link
+
+
+----------------
+
+using icons for job description 
+npm install lucide
