@@ -11,17 +11,18 @@
             <option >Part Time</option>
             <option >Full Time</option>
            </x-forms.select>
-           <x-forms.select name="type" label="Work Type" >
+           <x-forms.select name="workType" label="Work Type" >
             <option >Select Work Type</option>
             <option > OnSite</option>
             <option >Hybrid</option>
             <option >Remote</option>
         </x-forms.select>
-        <x-forms.textarea name="description" helperText="testing"  label="Job description " placeholder="Write a detailed job description..." />
-        <x-forms.textarea name="responsibility"  label="Job responsibilities " placeholder="Write in detail about responsibilities..." />
-        <x-forms.textarea name="requirement_skills"  label="Skills And Requirement " placeholder="Write in detail about Skills and Requirement..." />
-        <x-forms.textarea name="benefits"  label="Job Benefits " placeholder="Write in detail about Job Benefits..." />
-           
+        <x-forms.textarea name="description" helperText="Briefly describe the role and what the candidate will do. Keep it clear and engaging."  label="Job description " placeholder="Write a detailed job description..." />
+        <x-forms.textarea name="responsibility" helperText="List the key duties and responsibilities. Add each point on a new line."  label="Job responsibilities " placeholder="Write in detail about responsibilities..." />
+        <x-forms.textarea name="requirement_skills" helperText="Mention the required skills, qualifications, or tools. Add each item on a new line."  label="Skills And Requirement " placeholder="Write in detail about Skills and Requirement..." />
+        <x-forms.textarea name="benefits"  helperText="List the perks or benefits offered for this role. Add each benefit on a new line."  label="Job Benefits " placeholder="Write in detail about Job Benefits..." />
+                {{-- <x-forms.textarea name="extra" helperText="Briefly describe the role and what the candidate will do. Keep it clear and engaging."  label="Job description " placeholder="Write a detailed job description..." /> --}}
+
            
            <x-forms.divider/>
            <x-forms.input name="url" type="text" label="Company Url" placeholder="e.g. https://acme.com/jobs/ceo-wanted" />  

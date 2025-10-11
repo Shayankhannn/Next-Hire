@@ -35,22 +35,29 @@
          {{-- job description  --}}
          {{-- <h3 class="text-lg font-medium text-blue-600">Job Description</h3> --}}
             <p class="text-gray-300 w-[80%] pt-5" >
-                {{-- {{$job->description}} --}}
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati exercitationem eum nisi ipsa? Illum repellendus vitae dignissimos possimus omnis, voluptate nesciunt aut veritatis, amet accusantium asperiores quaerat cum, sit hic!
+                {{$job->description}}
+                {{-- Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati exercitationem eum nisi ipsa? Illum repellendus vitae dignissimos possimus omnis, voluptate nesciunt aut veritatis, amet accusantium asperiores quaerat cum, sit hic! --}}
             </p>
          {{-- job responsibility  --}}
                   <h3 class="text-lg font-medium text-blue-600 pt-5">Job Responsibility</h3>
 
           <p class="text-gray-300 w-[80%] pt-5" >
-                {{-- {{$job->responsibility}} --}}
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis voluptatem fuga adipisci corporis sunt blanditiis. Delectus eligendi tempore voluptatibus necessitatibus voluptatum natus laborum dicta odit ea, temporibus ullam deleniti voluptates!
+                {{$job->responsibility}}
+                {{-- Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis voluptatem fuga adipisci corporis sunt blanditiis. Delectus eligendi tempore voluptatibus necessitatibus voluptatum natus laborum dicta odit ea, temporibus ullam deleniti voluptates! --}}
             </p>
          {{-- job skills and requirement  --}}
                            <h3 class="text-lg font-medium text-blue-600 pt-5">Skills And Requirement</h3>
+                           <p class="text-gray-300 w-[80%] pt-5" >
+                {{$job->requirement_skills}}
+                {{-- Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis voluptatem fuga adipisci corporis sunt blanditiis. Delectus eligendi tempore voluptatibus necessitatibus voluptatum natus laborum dicta odit ea, temporibus ullam deleniti voluptates! --}}
+            </p>
 
          {{-- job benefits  --}}
-                           {{-- <h3 class="text-lg font-medium text-blue-600 pt-5"></h3> --}}
-
+ <h3 class="text-lg font-medium text-blue-600 pt-5">Job Benefits</h3>
+                           <p class="text-gray-300 w-[80%] pt-5" >
+                {{$job->benefits}}
+                {{-- Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis voluptatem fuga adipisci corporis sunt blanditiis. Delectus eligendi tempore voluptatibus necessitatibus voluptatum natus laborum dicta odit ea, temporibus ullam deleniti voluptates! --}}
+            </p>
          
     </div>
     <x-forms.divider/>

@@ -46,7 +46,12 @@ class JobController extends Controller
             'salary' => ['required'],
             'location' => 'required|string|max:255',
             'schedule' => ['required', Rule::in(['Full Time','Part Time'])],
+            'workType' => ['required', Rule::in(['OnSite','Hybrid','Remote'])],
             'url' => ['required','active_url'],
+            'description' => ['required','string'],
+            'responsibility' => ['required','string'],
+            'requirement_skills' => ['required','string'],
+            'benefits' => ['required','string'],
             'tags' => ['nullable'],
         ]); 
 
