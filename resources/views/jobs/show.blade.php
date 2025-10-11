@@ -7,14 +7,14 @@
 
 
         {{-- <h2 class="text-2xl font-medium text-blue-600">Company Name</h2> --}}
-        <h2 class="text-3xl font-medium text-blue-600 capitalize"><x-job-icon icon="building-2" class="w-7 h-7"> {{ $job->employer->name }} </x-job-icon></h2>
+        <h2 class="text-3xl font-medium text-blue-600 capitalize"><x-job-icon icon="building-2" class="w-7 h-7"> {{ $job->employer->company_name }} </x-job-icon></h2>
         <h2 class="text-lg font-medium text-gray-400 capitalize"><x-job-icon class="text-gray-400 w-2 h-2" icon="user"> {{ $job->employer->name }} </x-job-icon></h2>
          <x-job-icon icon="map-pin">Location: {{ $job->location }} </x-job-icon>
 
 
     </div>
     <div >
-        <img src="https://placehold.co/92x92"  alt="" class="h-auto w-24 rounded-full">
+<x-employer-logo :employer="$job->employer" class="h-auto w-24 rounded-full"/>   
     </div>
 </div>
 <x-forms.divider/>
@@ -66,10 +66,10 @@
     <div class="space-y-4">
     <h2 class="text-2xl font-medium text-blue-600 pt-6">About Company</h2>
     {{--  company description --}}
+    <x-job-icon icon="building">{{ $job->employer['companySize'] }} </x-job-icon>
     <p class="text-gray-300 w-[80%]" >
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore, ipsum voluptas! Dolore animi inventore veritatis, nesciunt placeat iste fugiat sequi.
+        {{ $job->employer['company_description'] }}
     </p>
-            <x-job-icon icon="building-2">Employees: {{ $job->created_at->diffForHumans() }} </x-job-icon>
 
         <a href="{{ $job->url }}" class="text-md text-blue-600 flex gap-1 items-center hover:text-white group">Apply Now <x-job-icon icon="arrow-right" class="w-2 h-2 group-hover:text-white"/></a>
 

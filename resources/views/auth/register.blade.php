@@ -11,7 +11,15 @@
     <x-forms.input label="Employer Name" name="employer"/>
     <x-forms.input label="company Name" name="company_name"/>
     <x-forms.textarea label="company description" helperText="" placeholder="Write in detail about your Company..." name="company_description"/>
-    <x-forms.input label="Employer Logo" name="logo" type="file"/>
+  <x-forms.select name="companySize" label="Number of Employees">
+    <option >Select Company Size</option>
+    <option value="1-10 (Startup / Small)">1–10 (Startup / Small)</option>
+    <option value="11-50 (Small to Medium)">11–50 (Small to Medium)</option>
+    <option value="51-200 (Medium)">51–200 (Medium)</option>
+    <option value="201-500 (Large)" >201–500 (Large)</option>
+    <option value="500+ (Enterprise)">500+ (Enterprise)</option>
+</x-forms.select>
+    <x-forms.input label="Company Logo" name="logo" type="file"/>
     
         
     <x-forms.button>Create Account</x-forms.button>

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Validation\Rule;
 use Illuminate\Validation\Rules\File;
 use Illuminate\Validation\Rules\Password;
 
@@ -39,6 +40,7 @@ class RegisteredUserController extends Controller
        $employerAttr =  $request->validate([
             'employer' => ['required'],
             'company_name' => ['required'],
+            'companySize' => ['required', Rule::in(['1-10 (Startup / Small)','11-50 (Small to Medium)','51-200 (Medium)','201-500 (Large)','500+ (Enterprise)'])],
             'company_description' => ['nullable','string'],
             'logo' => ['required',File::types(['png','jpg','jpeg','webp '])],
         ]);
@@ -49,6 +51,7 @@ class RegisteredUserController extends Controller
         $user->employer()->create([
             "name"=>$employerAttr["employer"],
             "company_name"=>$employerAttr["company_name"],
+            "companySize"=>$employerAttr["companySize"] ,
             "company_description"=>$employerAttr["company_description"] ?? null,
             "logo"=>$logoPath,
         ]);
