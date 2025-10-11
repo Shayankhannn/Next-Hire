@@ -9,6 +9,8 @@
     
     <x-forms.divider/>
     <x-forms.input label="Employer Name" name="employer"/>
+    <x-forms.input label="company Name" name="company_name"/>
+    <x-forms.textarea label="company description" helperText="" placeholder="Write in detail about your Company..." name="company_description"/>
     <x-forms.input label="Employer Logo" name="logo" type="file"/>
     
         

@@ -12,5 +12,5 @@
 <x-forms.field :$label :$name>
     
     <textarea {{  $attributes($defaults)  }}>{{old($name)}}</textarea>
-    <small class="text-blue-400">{{$helperText}}</small>
+    <small class="text-blue-400">{{$helperText }}</small>
 </x-forms.field>

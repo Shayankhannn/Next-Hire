@@ -38,6 +38,8 @@ class RegisteredUserController extends Controller
         ]);
        $employerAttr =  $request->validate([
             'employer' => ['required'],
+            'company_name' => ['required'],
+            'company_description' => ['nullable','string'],
             'logo' => ['required',File::types(['png','jpg','jpeg','webp '])],
         ]);
 
@@ -46,6 +48,8 @@ class RegisteredUserController extends Controller
 
         $user->employer()->create([
             "name"=>$employerAttr["employer"],
+            "company_name"=>$employerAttr["company_name"],
+            "company_description"=>$employerAttr["company_description"] ?? null,
             "logo"=>$logoPath,
         ]);
 
