@@ -57,7 +57,9 @@ class JobController extends Controller
 
         $attr['featured'] = $request->has('featured') ;
 
-        $job = Auth::user()->employer->jobs()->create(Arr::except($attr,'tags'));
+        $employer = Auth::user()->employer;
+        abort_unless($employer,403,"You must be an employer to post a job");
+        $job = Auth::user()->$employer->jobs()->create(Arr::except($attr,'tags'));
 
         if($attr['tags'] ?? false){
             $tags =  explode(',',$attr['tags']);

@@ -18,9 +18,9 @@
             <option >Remote</option>
         </x-forms.select>
         <x-forms.textarea name="description" helperText="Briefly describe the role and what the candidate will do. Keep it clear and engaging."  label="Job description " placeholder="Write a detailed job description..." />
-        <x-forms.textarea name="responsibility" helperText="List the key duties and responsibilities. Add each point on a new line."  label="Job responsibilities " placeholder="Write in detail about responsibilities..." />
-        <x-forms.textarea name="requirement_skills" helperText="Mention the required skills, qualifications, or tools. Add each item on a new line."  label="Skills And Requirement " placeholder="Write in detail about Skills and Requirement..." />
-        <x-forms.textarea name="benefits"  helperText="List the perks or benefits offered for this role. Add each benefit on a new line."  label="Job Benefits " placeholder="Write in detail about Job Benefits..." />
+        <x-forms.textarea name="responsibility" helperText="List the key duties and responsibilities. Add each point on a new line or separated with comma ' , '"  label="Job responsibilities " placeholder="Write in detail about responsibilities..." />
+        <x-forms.textarea name="requirement_skills" helperText="Mention the required skills, qualifications, or tools. Add each item on a new line or separated with comma ' , '"  label="Skills And Requirement " placeholder="Write in detail about Skills and Requirement..." />
+        <x-forms.textarea name="benefits"  helperText="List the perks or benefits offered for this role. Add each benefit on a new line or separated with comma ' , '"  label="Job Benefits " placeholder="Write in detail about Job Benefits..." />
                 {{-- <x-forms.textarea name="extra" helperText="Briefly describe the role and what the candidate will do. Keep it clear and engaging."  label="Job description " placeholder="Write a detailed job description..." /> --}}
 
            
