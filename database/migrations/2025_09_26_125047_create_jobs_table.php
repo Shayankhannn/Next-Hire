@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('salary');
             $table->string('location');
             $table->string('schedule')->default('full Time');
-            $table->string('type')->default('OnSite');
+            $table->string('workType')->default('OnSite');
             $table->string('url');
             $table->text('description')->nullable();
             $table->text('responsibility')->nullable();
