@@ -40,7 +40,7 @@ fix -- image and search results for in results.blade.php -- done i was using for
 
 fix -- file validation and file field extention issue in registration --   done -- wasnt using array in validation
 
-fix -- exp level field value in create.blade
+fix -- exp level field value in create.blade --- done
 ----------
 
 learning

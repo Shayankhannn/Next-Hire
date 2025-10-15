@@ -12,5 +12,5 @@
 <x-forms.field :$label :$name>
     
     <textarea {{  $attributes($defaults)  }}>{{old($name)}}</textarea>
-    <small class="text-blue-400">{{$helperText }}</small>
+    <small class="text-blue-400"> 💡 Tip: Write each point on a new line to show them as bullet points.</small>
 </x-forms.field>

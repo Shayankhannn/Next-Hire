@@ -19,10 +19,11 @@
 <x-forms.divider/>
 
 
-    <div class="gap-2 text-md flex items-center mt-6 justify-between">
+    <div class="gap-2 text-sm flex items-center mt-6 justify-between">
         <x-job-icon icon="wallet">Salary: {{ $job->salary }} </x-job-icon>
         <x-job-icon icon="clock">Job Type: {{ $job->schedule }} </x-job-icon>
-        <x-job-icon icon="briefcase">Work Type: Remote </x-job-icon>
+        <x-job-icon icon="briefcase">Work Type: {{ $job->workType }} </x-job-icon>
+        <x-job-icon icon="award">Experience Level : {{ $job->experienceLevel }} </x-job-icon>
         <x-job-icon icon="clock">Date Posted: {{ $job->created_at->diffForHumans() }} </x-job-icon>
 
     </div>
@@ -40,18 +41,37 @@
                   <h3 class="text-lg font-medium text-blue-600 pt-5">Job Responsibility</h3>
 
           <p class="text-gray-300 w-[80%] pt-5" >
-                {{$job->responsibility}}
+            <ul class="list-disc list-inside ">
+            @foreach (preg_split('/\r\n|\r|\n/',$job->responsibility) as $line)
+                @if (!empty(trim($line)))
+                 <li>{{trim($line)}}</li>   
+                @endif
+            @endforeach
+            </ul>
             </p>
          {{-- job skills and requirement  --}}
                            <h3 class="text-lg font-medium text-blue-600 pt-5">Skills And Requirement</h3>
-                           <p class="text-gray-300 w-[80%] pt-5" >
-                {{$job->requirement_skills}}
+                   <p class="text-gray-300 w-[80%] pt-5" >
+            <ul class="list-disc list-inside ">
+            @foreach (preg_split('/\r\n|\r|\n/',$job->requirement_skills) as $line)
+                @if (!empty(trim($line)))
+                 <li>{{trim($line)}}</li>   
+                @endif
+            @endforeach
+            </ul>
             </p>
+                        
 
          {{-- job benefits  --}}
  <h3 class="text-lg font-medium text-blue-600 pt-5">Job Benefits</h3>
-                           <p class="text-gray-300 w-[80%] pt-5" >
-                {{$job->benefits}}
+                          <p class="text-gray-300 w-[80%] pt-5" >
+            <ul class="list-disc list-inside ">
+            @foreach (preg_split('/\r\n|\r|\n/',$job->benefits) as $line)
+                @if (!empty(trim($line)))
+                 <li>{{trim($line)}}</li>   
+                @endif
+            @endforeach
+            </ul>
             </p>
          
     </div>
@@ -63,7 +83,6 @@
     {{--  company description --}}
     <x-job-icon icon="building">{{ $job->employer['companySize'] }} </x-job-icon>
     <p class="text-gray-300 w-[80%]" >
-        {{-- {{ $job->employer['company_description'] }} --}}
         {{ $job->employer->company_description ?? 'No description available.' }}
     </p>
 
@@ -71,8 +90,9 @@
 
 </div>
 
+<x-forms.divider/>
 
-<div class="space-x-2 pt-8">
+<div class="space-x-2 pb-6">
     <h3 class="text-xl font-medium text-blue-600 py-5">Tags</h3>
     @foreach ($job->tags as $tag )
     <x-tag :$tag/>
