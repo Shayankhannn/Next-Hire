@@ -19,12 +19,11 @@
         </x-forms.select>
         <x-forms.select name="experienceLevel" label="Experience Level">
     <option value="">Select Experience Level</option>
-    <option >Fresher</option>
-    <option >Internship</option>
-    <option >Entry Level</option>
-    <option >Mid Level</option>
-    <option >Senior / Experienced</option>
-    <option >Data Entry </option>
+    <option value="internship">Internship</option>
+    <option value="fresher">Fresher</option>
+    <option value="entry-level">Entry Level</option>
+    <option value="mid-level">Mid Level</option>
+    <option value="senior">Senior / Experienced</option>
 </x-forms.select>
         <x-forms.textarea name="description" helperText="Briefly describe the role and what the candidate will do. Keep it clear and engaging."  label="Job description " placeholder="Write a detailed job description..." />
         <x-forms.textarea name="responsibility" helperText="List the key duties and responsibilities. Add each point on a new line or separated with comma ' , '"  label="Job responsibilities " placeholder="Write in detail about responsibilities..." />

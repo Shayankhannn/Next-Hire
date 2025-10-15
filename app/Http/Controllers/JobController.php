@@ -47,7 +47,7 @@ class JobController extends Controller
             'location' => 'required|string|max:255',
             'schedule' => ['required', Rule::in(['Full Time','Part Time'])],
             'workType' => ['required', Rule::in(['OnSite','Hybrid','Remote'])],
-            'experienceLevel' => ['required', Rule::in(['fresher','internship','entry-level','mid-level','senior','data-entry'])],
+            'experienceLevel' => ['required', Rule::in(['fresher','internship','entry-level','mid-level','senior'])],
             'url' => ['required','active_url'],
             'description' => ['required','string'],
             'responsibility' => ['required','string'],
