@@ -1,5 +1,5 @@
 
-@props(['label', 'name'])
+@props(['label', 'name','value' => null])
 
 @php
     $defaults = [

@@ -40,7 +40,11 @@ fix -- image and search results for in results.blade.php -- done i was using for
 
 fix -- file validation and file field extention issue in registration --   done -- wasnt using array in validation
 
-fix -- exp level field value in create.blade --- done
+fix -- exp level field value in create blade --- done
+
+fix -- shedule select field its not picking value in edit mode and other rselect too
+
+fix -- textarea same issue as select 
 ----------
 
 learning
@@ -101,3 +105,7 @@ npm install lucide
 add this later if want  job close or open
 
 $table->boolean('is_active')->default(true);
+
+in edit page to get tags back in original form do this 
+            <x-forms.input name="tags" type="text" label="Tags ( ,  Comma Separated )" placeholder="e.g. frontend , video , education" value="{{ $job->tags->pluck('name')->implode(', ') }}"/>
+
