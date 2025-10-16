@@ -96,7 +96,9 @@ class JobController extends Controller
      */
     public function edit(Job $job)
     {
-        //
+        return view('jobs.edit',[
+            'job' => $job
+        ]);
     }
 
     /**

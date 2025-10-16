@@ -1,6 +1,7 @@
 <x-layout>
     <div class="capitalize">
     <x-page-heading>Job Details</x-page-heading>
+    <a href="/jobs/{{ $job->id }}/edit">Edit</a>
 <x-forms.divider/>
 <div class="flex justify-between items-center pb-6" >
     <div class="space-y-2">
