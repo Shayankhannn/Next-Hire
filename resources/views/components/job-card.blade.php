@@ -5,7 +5,7 @@
         </div>
         <div class="py-4 ">
             <h3 class="group-hover:text-blue-800 text-xl font-bold">
-            <a href="{{ $job->id }}"  target="_blank">
+            <a href="/jobs/{{ $job->id }}"  >
 
                 {{ $job->title }}
             </a>

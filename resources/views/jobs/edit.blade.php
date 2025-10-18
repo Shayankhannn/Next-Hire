@@ -8,9 +8,12 @@
             <x-forms.input name="salary" type="text" label="Job Salary" placeholder="e.g. $50,000" value="{{ $job->salary }}"/>
             <x-forms.input name="location" type="text" label="Job Location" placeholder="e.g.Boston MA, etc." value="{{ $job->location }}"/>
             <x-forms.select name="schedule" label="Job Type" :value="$job->schedule ">
+                @php
+                    $selectedSchedule = $job->schedule;
+                @endphp
                 <option>Select Job Type</option>
-            <option value="Part Time" {{ old('schedule',$value) == "Part Time" ? 'selected' : '' }} >Part Time</option>
-            <option value="Full Time" {{ old('schedule',$value) == "Full Time" ? 'selected' : '' }}>Full Time</option>
+            <option value="Part Time" {{ old('schedule',$selectedSchedule) == "Part Time" ? 'selected' : '' }} >Part Time</option>
+            <option value="Full Time" {{ old('schedule',$selectedSchedule) == "Full Time" ? 'selected' : '' }}>Full Time</option>
            </x-forms.select>
            <x-forms.select name="workType" label="Work Type" value="{{ $job->workType }}">
             <option >Select Work Type</option>
