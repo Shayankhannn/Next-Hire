@@ -42,9 +42,9 @@ fix -- file validation and file field extention issue in registration --   done 
 
 fix -- exp level field value in create blade --- done
 
-fix -- shedule select field its not picking value in edit mode and other rselect too
+fix --  select field its not picking value in edit mode and other rselect too --- done add option component and pass props to it
 
-fix -- textarea same issue as select 
+fix -- textarea same issue as select --- done add value to props
 ----------
 
 learning

@@ -8,26 +8,25 @@
             <x-forms.input name="salary" type="text" label="Job Salary" placeholder="e.g. $50,000" value="{{ $job->salary }}"/>
             <x-forms.input name="location" type="text" label="Job Location" placeholder="e.g.Boston MA, etc." value="{{ $job->location }}"/>
             <x-forms.select name="schedule" label="Job Type" :value="$job->schedule ">
-                @php
-                    $selectedSchedule = $job->schedule;
-                @endphp
+             
                 <option>Select Job Type</option>
-            <option value="Part Time" {{ old('schedule',$selectedSchedule) == "Part Time" ? 'selected' : '' }} >Part Time</option>
-            <option value="Full Time" {{ old('schedule',$selectedSchedule) == "Full Time" ? 'selected' : '' }}>Full Time</option>
+                <x-forms.option value="Part Time" name="schedule" :selected="$job->schedule">Part Time</x-forms.option>
+                <x-forms.option value="Full Time" name="schedule" :selected="$job->schedule">Full Time</x-forms.option>
+            {{-- <option value="Full Time" {{ old('schedule',$selectedSchedule) == "Full Time" ? 'selected' : '' }}>Full Time</option> --}}
            </x-forms.select>
            <x-forms.select name="workType" label="Work Type" value="{{ $job->workType }}">
             <option >Select Work Type</option>
-            <option > OnSite</option>
-            <option >Hybrid</option>
-            <option >Remote</option>
+            <x-forms.option value="OnSite" name="workType" :selected="$job->workType">OnSite</x-forms.option>
+            <x-forms.option value="Hybrid" name="workType" :selected="$job->workType">Hybrid</x-forms.option>
+            <x-forms.option value="Remote" name="workType" :selected="$job->workType">Remote</x-forms.option>
         </x-forms.select>
         <x-forms.select name="experienceLevel" label="Experience Level" value="{{ $job->experienceLevel }}">
     <option value="">Select Experience Level</option>
-    <option value="internship">Internship</option>
-    <option value="fresher">Fresher</option>
-    <option value="entry-level">Entry Level</option>
-    <option value="mid-level">Mid Level</option>
-    <option value="senior">Senior / Experienced</option>
+            <x-forms.option value="internship" name="experienceLevel" :selected="$job->experienceLevel">Internship</x-forms.option>
+            <x-forms.option value="fresher" name="experienceLevel" :selected="$job->experienceLevel">Fresher</x-forms.option>
+            <x-forms.option value="entry-level" name="experienceLevel" :selected="$job->experienceLevel">Entry Level</x-forms.option>
+            <x-forms.option value="mid-level" name="experienceLevel" :selected="$job->experienceLevel">Mid Level</x-forms.option>
+            <x-forms.option value="senior" name="experienceLevel" :selected="$job->experienceLevel">Senior / Experienced</x-forms.option>
 </x-forms.select>
         <x-forms.textarea name="description"   label="Job description " placeholder="Briefly describe the role and what the candidate will do. Keep it clear and engaging." value="{{ $job->description }}"/>
         <x-forms.textarea name="responsibility"  placeholder="List the key duties and responsibilities." label="Job responsibilities " placeholder="Write in detail about responsibilities..." value="{{ $job->responsibility }}"/>
