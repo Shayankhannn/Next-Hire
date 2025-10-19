@@ -106,7 +106,8 @@ class JobController extends Controller
      */
     public function update(UpdateJobRequest $request, Job $job)
     {
-        //
+        
+         
     }
 
     /**
