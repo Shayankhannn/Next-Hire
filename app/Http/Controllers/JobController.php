@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Models\Job;
-use App\Http\Requests\StoreJobRequest;
 use App\Http\Requests\UpdateJobRequest;
 use App\Models\Tag;
 use Illuminate\Http\Request;
@@ -13,6 +12,14 @@ use Illuminate\Validation\Rule;
 
 class JobController extends Controller
 {
+
+
+    // validation 
+
+
+
+
+
     /**
      * Display a listing of the resource.
      */
@@ -107,7 +114,7 @@ class JobController extends Controller
     public function update(UpdateJobRequest $request, Job $job)
     {
         
-         
+
     }
 
     /**
