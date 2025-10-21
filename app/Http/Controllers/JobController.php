@@ -96,20 +96,7 @@ class JobController extends Controller
         // abort_unless($employer,403,"You must be an employer to post a job");
         $job = Auth::user()->employer->jobs()->create(Arr::except($attr,'tags'));
 
-        if($attr['tags'] ?? false){
-            $tags =  explode(',',$attr['tags']);
-            // normalised tag and remove duplicates
-            $normalised = [];
-
-            foreach($tags as $tag){
-                $clean = strtolower(trim($tag));
-                $clean = preg_replace('/[^a-z0-9]/', '', $clean);
-                $normalised[$clean] = $tag ;
-            }
-            foreach ($normalised as $tag ) {
-                $job->tag($tag);
-            }
-        }
+       $this->syncTags($job,$attr['tags'] ?? null);
 
         return redirect('/jobs/'.$job->id)->with('success','Job posted successfully');
 
@@ -138,9 +125,14 @@ class JobController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateJobRequest $request, Job $job)
+    public function update(Request $request, Job $job)
     {
-        
+    
+        $attr = $this->validateJob($request);
+        $attr['featured'] = $request->has('featured') ;
+        $job = Auth::user()->employer->jobs()->update(Arr::except($attr,'tags'));
+        $this->syncTags($job,$attr['tags'] ?? null);
+        return redirect('/jobs/'.$job->id)->with('success','Job updated successfully');
 
     }
 
