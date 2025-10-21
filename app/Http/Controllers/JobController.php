@@ -16,7 +16,46 @@ class JobController extends Controller
 
     // validation 
 
+    private function validateJob(Request $request)
+    {
+        return $request->validate([
+              'title' => 'required|string|max:255',
+            'salary' => ['required'],
+            'location' => 'required|string|max:255',
+            'schedule' => ['required', Rule::in(['Full Time','Part Time'])],
+            'workType' => ['required', Rule::in(['OnSite','Hybrid','Remote'])],
+            'experienceLevel' => ['required', Rule::in(['fresher','internship','executive','mid-level','senior'])],
+            'url' => ['required','active_url'],
+            'description' => ['required','string'],
+            'responsibility' => ['required','string'],
+            'requirement_skills' => ['required','string'],
+            'benefits' => ['required','string'],
+            'tags' => ['nullable'],
+        ]);
+    }
 
+    // tags 
+
+    private function syncTags($job,$tags)
+    {
+        if(!$tags){
+            return;
+        }
+        $tags = explode(',',$tags);
+        $normalized = [];
+        foreach($tags as $tag){
+            $clean = strtolower(trim($tag));
+            $clean = preg_replace('/[^a-z0-9]/','',$clean);
+            $normalized[$clean] = $tag ;
+        }
+
+        $job->untag();
+        foreach($normalized as $tag){
+            $job->tag($tag);
+        }
+        
+
+    }
 
 
 
@@ -34,6 +73,7 @@ class JobController extends Controller
             'tags' => Tag::all(), 
         ]);
     }
+    
 
     /**
      * Show the form for creating a new resource.
@@ -48,20 +88,7 @@ class JobController extends Controller
      */
     public function store(Request $request)
     {
-     $attr =     $request->validate([
-            'title' => 'required|string|max:255',
-            'salary' => ['required'],
-            'location' => 'required|string|max:255',
-            'schedule' => ['required', Rule::in(['Full Time','Part Time'])],
-            'workType' => ['required', Rule::in(['OnSite','Hybrid','Remote'])],
-            'experienceLevel' => ['required', Rule::in(['fresher','internship','entry-level','mid-level','senior'])],
-            'url' => ['required','active_url'],
-            'description' => ['required','string'],
-            'responsibility' => ['required','string'],
-            'requirement_skills' => ['required','string'],
-            'benefits' => ['required','string'],
-            'tags' => ['nullable'],
-        ]); 
+     $attr =  $this->validateJob($request); 
 
         $attr['featured'] = $request->has('featured') ;
 

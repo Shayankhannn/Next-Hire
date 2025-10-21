@@ -21,7 +21,7 @@
     <option value="">Select Experience Level</option>
     <option value="internship">Internship</option>
     <option value="fresher">Fresher</option>
-    <option value="entry-level">Entry Level</option>
+    <option value="executive">Executive</option>
     <option value="mid-level">Mid Level</option>
     <option value="senior">Senior / Experienced</option>
 </x-forms.select>

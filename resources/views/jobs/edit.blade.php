@@ -24,7 +24,7 @@
     <option value="">Select Experience Level</option>
             <x-forms.option value="internship" name="experienceLevel" :selected="$job->experienceLevel">Internship</x-forms.option>
             <x-forms.option value="fresher" name="experienceLevel" :selected="$job->experienceLevel">Fresher</x-forms.option>
-            <x-forms.option value="entry-level" name="experienceLevel" :selected="$job->experienceLevel">Entry Level</x-forms.option>
+            <x-forms.option value="executive" name="experienceLevel" :selected="$job->experienceLevel">Executive</x-forms.option>
             <x-forms.option value="mid-level" name="experienceLevel" :selected="$job->experienceLevel">Mid Level</x-forms.option>
             <x-forms.option value="senior" name="experienceLevel" :selected="$job->experienceLevel">Senior / Experienced</x-forms.option>
 </x-forms.select>
