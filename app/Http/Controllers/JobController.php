@@ -130,7 +130,9 @@ class JobController extends Controller
         $attr = $this->validateJob($request);
         $attr['featured'] = $request->has('featured') ;
         $job->update(Arr::except($attr,'tags'));
+
         if($attr['tags'] ?? null)
+            
         $this->syncTags($job ,$attr['tags'] ?? null);
         return redirect('/jobs/'.$job->id)->with('success','Job updated successfully');
 

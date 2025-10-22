@@ -45,7 +45,10 @@ fix -- exp level field value in create blade --- done
 fix --  select field its not picking value in edit mode and other rselect too --- done add option component and pass props to it
 
 fix -- textarea same issue as select --- done add value to props
-fix -- experience validation issue
+fix -- experience validation issue -- done was passing it wrong 
+
+fix -- tag code the refactoring isnt really woring out 
+
 ----------
 
 learning
