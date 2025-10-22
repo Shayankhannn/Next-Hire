@@ -20,8 +20,8 @@
             <x-forms.option value="Hybrid" name="workType" :selected="$job->workType">Hybrid</x-forms.option>
             <x-forms.option value="Remote" name="workType" :selected="$job->workType">Remote</x-forms.option>
         </x-forms.select>
-        <x-forms.select name="experienceLevel" label="Experience Level" value="{{ $job->experienceLevel }}">
-    <option value="">Select Experience Level</option>
+        <x-forms.select name="experienceLevel" label="Experience Level"  >
+    <option >Select Experience Level</option>
             <x-forms.option value="internship" name="experienceLevel" :selected="$job->experienceLevel">Internship</x-forms.option>
             <x-forms.option value="fresher" name="experienceLevel" :selected="$job->experienceLevel">Fresher</x-forms.option>
             <x-forms.option value="executive" name="experienceLevel" :selected="$job->experienceLevel">Executive</x-forms.option>
@@ -38,7 +38,7 @@
            <x-forms.input name="url" type="text" label="Company Url" placeholder="e.g. https://acme.com/jobs/ceo-wanted" value="{{ $job->url }}"/>  
            <x-forms.checkbox name="featured"  label="Feature (Costs Extra)" />
             <x-forms.input name="tags" type="text" label="Tags ( ,  Comma Separated )" placeholder="e.g. frontend , video , education" value="{{ $job->tags->pluck('name')->implode(', ') }}"/>
-            <x-forms.button>Publish</x-forms.button>
+            <x-forms.button>Update</x-forms.button>
             </x-forms.form>   
           
  

@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Models\Job;
-use App\Http\Requests\UpdateJobRequest;
 use App\Models\Tag;
 use Illuminate\Http\Request;
 use Illuminate\Support\Arr;
@@ -96,7 +95,7 @@ class JobController extends Controller
         // abort_unless($employer,403,"You must be an employer to post a job");
         $job = Auth::user()->employer->jobs()->create(Arr::except($attr,'tags'));
 
-       $this->syncTags($job,$attr['tags'] ?? null);
+       $this->syncTags($job ,$attr['tags'] ?? null);
 
         return redirect('/jobs/'.$job->id)->with('success','Job posted successfully');
 
@@ -130,8 +129,9 @@ class JobController extends Controller
     
         $attr = $this->validateJob($request);
         $attr['featured'] = $request->has('featured') ;
-        $job = Auth::user()->employer->jobs()->update(Arr::except($attr,'tags'));
-        $this->syncTags($job,$attr['tags'] ?? null);
+        $job->update(Arr::except($attr,'tags'));
+        if($attr['tags'] ?? null)
+        $this->syncTags($job ,$attr['tags'] ?? null);
         return redirect('/jobs/'.$job->id)->with('success','Job updated successfully');
 
     }
