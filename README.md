@@ -1,4 +1,4 @@
-Next Hire 
+project Next Hire
 
 Job Portal using laravel blade tailwind 
 
